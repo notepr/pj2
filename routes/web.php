@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('404');
 });
+Route::any('cv', 'LoadCvController@ShowCv')
+    ->name('api.getphonemessage.ShowCv');
 
 // Route::group(['middleware' => ['CheckKey', 'PreventBackButton']], function () {
 //     Route::get('/home', function () {
