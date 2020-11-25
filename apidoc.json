@@ -1,0 +1,7 @@
+{
+  "name": "API.BKACAD.XYZ",
+  "version": "0.1.0",
+  "url" : "http://localhost:8080/project-2/public/api/",
+  "description": "Phiên bản thử nghiệm",
+  "sampleUrl" : "http://localhost:8080/project-2/public/api/"
+}
