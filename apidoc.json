@@ -1,7 +1,7 @@
 {
-  "name": "API.BKACAD.XYZ",
+  "name": "notepr.XYZ",
   "version": "0.1.0",
-  "url" : "http://localhost:8080/project-2/public/api/",
+  "url" : "https://notepr.xyz/api/",
   "description": "Phiên bản thử nghiệm",
-  "sampleUrl" : "http://localhost:8080/project-2/public/api/"
+  "sampleUrl" : "https://notepr.xyz/api/"
 }

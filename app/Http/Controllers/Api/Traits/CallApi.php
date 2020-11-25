@@ -6,7 +6,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 trait CallApi {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-    private $base_url = 'https://api.bkacad.xyz/api/';
+    private $base_url = 'https://api.notepr.xyz/api/';
     //private $base_url = 'http://localhost:8080/github/api.bkacad.xyz/public/api/';
     private $key  = 'duongbavl';
     private $body = [];
