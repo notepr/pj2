@@ -74,8 +74,11 @@ class LichHocController extends Controller {
                     }
                 }
             }
-            $ngay_nghi        = $this->getNgayNghiMuti($array_ma_nguoi_dung, date("Y-m-d"));
-            $lich_day_bo_sung = LichDayBoSung::whereNotIn('ma_phong', $rq->ma_phong)
+            $ngay_nghi = $this->getNgayNghiMuti($array_ma_nguoi_dung, date("Y-m-d"));
+            if (!is_array($rq->ma_phong) && empty($rq->ma_phong)) {
+                $array_ma_phong = [];
+            }
+            $lich_day_bo_sung = LichDayBoSung::whereNotIn('ma_phong', $array_ma_phong)
                 ->where('tinh_trang', 1)
                 ->where('lich_day_bo_sung.ngay', '>=', date("Y-m-d"))
                 ->join('ca', 'lich_day_bo_sung.ma_ca', '=', 'ca.ma_ca')
@@ -161,10 +164,6 @@ class LichHocController extends Controller {
                     array_push($array_return, $co_dinh);
                 }
             }
-            // $array_return       = collect($array_return)->sortBy('ngay')->groupBy('ngay')->toArray();
-            // $lich_phong_convent = collect($lich_phong_convent)->sortBy('ngay')->groupBy('ngay')->toArray();
-            // $array_co_dinh      = collect($array_co_dinh)->sortBy('ngay')->groupBy('ngay')->toArray();
-            // dd($array_return, $lich_phong_convent, $array_co_dinh);
             return ResponseMau::Store([
                 'string' => ResponseMau::SUCCESS_GET,
                 'data'   => (new LichHocResource($array_return))->phongTrong(),
