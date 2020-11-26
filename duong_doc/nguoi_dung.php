@@ -88,7 +88,7 @@
  *  </div><br>
  * @apiSampleRequest dangnhap
  * @apiExample {php} Truy Vấn Mẫu:
- * http://localhost:8080/github/pri/public/api/dangnhap/test/d3d9446802a44259755d38e6d163e820
+ * https://notepr.xyz/api/dangnhap/duong/c4ca4238a0b923820dcc509a6f75849b
  * @apiParam {String} tai_khoan Email hoặc Username.
  * @apiParam {String} mat_khau Mật khẩu của người dùng.
  *
